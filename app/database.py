@@ -1,3 +1,4 @@
+from models import *
 
 employees = [
     
@@ -11,11 +12,19 @@ class Database:
         self.employees.append(employee)
         return employee
     
-    def get_all_employees(self):
-        return self.employees
+    def get_all_employees(self) -> list[EmployeeResponse]:
+        response = []
+        response.extend(EmployeeResponse(emp) for emp in employees)
+
+        return response
     
-    def get_employee_by_id(emp_id) -> :
+    def get_employee_by_id(emp_id) -> EmployeeResponse | None:
         for emp in employees:
             if emp['emp_id']:
-                return emp
+                return EmployeeResponse(emp)
         return None
+    
+    def update_employee(self, id: str, employee: EmployeeUpdate) -> EmployeeUpdate:
+        for emp in self.employees:
+            pass
+        
