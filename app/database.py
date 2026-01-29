@@ -1,3 +1,4 @@
+
 from models import *
 
 employees = [
@@ -27,4 +28,4 @@ class Database:
     def update_employee(self, id: str, employee: EmployeeUpdate) -> EmployeeUpdate:
         for emp in self.employees:
             pass
-        
+
