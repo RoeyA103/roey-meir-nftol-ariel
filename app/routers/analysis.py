@@ -17,3 +17,4 @@ def mission_statistics():
 @router.get("/stats/workload", response_model=List[Dict])
 def employee_workload():
     return get_employee_workload(employees, missions)
+
