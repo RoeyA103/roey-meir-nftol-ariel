@@ -1,7 +1,8 @@
 
-from datetime import datetime
 from pydantic import BaseModel
-from  typing import Optional
+from typing import Optional
+from datetime import datetime
+
 
 class EmployeeBase(BaseModel):
     first_name: str
